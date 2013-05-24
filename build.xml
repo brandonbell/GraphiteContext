@@ -1,0 +1,19 @@
+<project name="GraphiteContext" default="compile" basedir=".">
+  <description>
+    Like the GangliaContext for Hadoop, sends metrics to Graphite
+  </description>
+
+  <target name="clean">
+    <delete file="GraphiteContext.jar" />
+  </target>
+
+  <target name="compile">
+    <exec executable="jar">
+      <arg value="-cf" />
+      <arg value="GraphiteContext.jar" />
+      <arg value="-C" />
+      <arg value="org/" />
+      <arg value="." />
+    </exec>
+  </target>
+</project>
